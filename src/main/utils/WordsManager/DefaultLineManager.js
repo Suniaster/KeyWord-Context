@@ -1,5 +1,5 @@
 import PositionInterface from '../PositionManger/PositionInterface';
-import StopWordsManager from '../StopWordManager/DefaultStopWordManager'
+import StopWordsManager from '../../kwic/StopWordManager/DefaultStopWordManager'
 /**
  * Classe abstrata responsável pela criação da interface de armazenadores de "linhas" ou seja, coleções de palavras
  * 

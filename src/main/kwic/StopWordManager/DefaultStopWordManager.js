@@ -1,4 +1,4 @@
-import fileReader from '../../input/fileReader';
+import fileReader from '../input/fileReader';
 
 /**
  * Classe abstrata responsável pela criação da interface de armazenadores de "linhas" ou seja, coleções de palavras
