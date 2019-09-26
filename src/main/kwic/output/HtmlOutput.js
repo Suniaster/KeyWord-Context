@@ -40,7 +40,7 @@ export default class HtmlOutput extends OutputInterface{
     </tbody>
     </table>
     </div>
-    <h2>credits to <a href="https://codepen.io/heypablete/pen/qdIsm" target="_blank">Pablo García Fernández</a></h2>
+    <h2>credits to <a href="https://codepen.io/heypablete/pen/qdIsm" target="_blank">codepen</a></h2>
 </body>
 </html>`
     var tablebody = ''
