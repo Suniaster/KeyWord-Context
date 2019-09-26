@@ -16,7 +16,12 @@ export default class InputInterface{
       throw new TypeError("Must create method read.");
     }
 
+    if(this.processData === undefined){
+      throw new TypeError("Must create method processData.");
+    }
+
   }
+
 
   /**
    * 

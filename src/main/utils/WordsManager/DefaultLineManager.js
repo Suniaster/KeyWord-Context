@@ -9,9 +9,9 @@ export default class Phrase{
   /**
    * 
    * @param {string} str_line string que contem a frase.
-   * @param {PositionInterface} position Posição designada a frase
+   * @param {number} position Numero da posição designada a frase
    */
-  constructor(str_line, position){
+  constructor(str_line='', position=undefined){
 
     this.str_line = str_line
     this.position = position
@@ -19,6 +19,9 @@ export default class Phrase{
     
   }
   
+  getPosition(){
+    return 'posição ' + this.getPosition;
+  }
 
   get setOfWords(){
     return this.str_line.split(" ");

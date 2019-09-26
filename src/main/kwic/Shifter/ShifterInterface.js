@@ -21,12 +21,13 @@ export default class ShifterInterface{
       throw new TypeError("Cannot construct InputInterface instances directly");
     }
 
-    // Requerindo a criação do método read para 
-    if(this.generateShifts === undefined){
-      throw new TypeError("Must create method read.");
-    }
-
   }
 
+  /**
+   * 
+   * @param {Phrase} phrase 
+   * @returns lista de phrases com os shifts de determinda frase de entrada.
+   */
+  generateShifts(phrase = this.phrase){}
 
 }

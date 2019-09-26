@@ -41,7 +41,7 @@ export default class StopWordsManager{
     var new_phrase = [];
     var sw = this.stopWords
     list.forEach((value, index)=>{
-      if(! sw.includes(value)){
+      if(! sw.includes(value.toLowerCase())){
         new_phrase.push(value)
       }
     });

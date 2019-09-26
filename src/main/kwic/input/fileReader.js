@@ -42,4 +42,14 @@ export default class FileReader extends InputInterface{
     return this.data;
   }
 
+  /**
+   * 
+   * @param {string} read_content 
+   * @returns array with the content read separeated
+   */
+  processData(read_content = this.data){
+    return read_content.split("\n");
+  }
+
+
 }
