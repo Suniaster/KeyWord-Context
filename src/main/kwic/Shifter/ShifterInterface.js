@@ -1,4 +1,4 @@
-import Phrase from '../LineManager/WordsManager/DefaultLineManager';
+import Phrase from '../../utils/WordsManager/DefaultLineManager';
 
 /**
  * Classe abstrata responsável pela criação da interface dos Shifter do problemas de KeyWord

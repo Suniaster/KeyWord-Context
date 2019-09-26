@@ -1,5 +1,5 @@
 import Phrase from './main/utils/WordsManager/DefaultLineManager';
-import KwicShifter from './Shifter/KwicShifter';
+import KwicShifter from './main/kwic/Shifter/KwicShifter';
 
 
 var s = new Phrase("Hi i am an apple");

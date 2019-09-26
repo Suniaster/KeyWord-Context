@@ -1,5 +1,5 @@
 import ShifterInterface from './ShifterInterface';
-import Phrase from '../LineManager/WordsManager/DefaultLineManager';
+import Phrase from '../../utils/WordsManager/DefaultLineManager';
 /**
  * Classe para leitura da entrada por arquivo.
  * @extends ShifterInterface

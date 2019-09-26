@@ -9,7 +9,7 @@ import fileReader from '../input/fileReader';
  */
 export default class StopWordsManager{
 
-  constructor(input_type = fileReader, query='./resources/stop_words.txt'){
+  constructor(input_type = fileReader, query='./src/main/resources/stop_words.txt'){
     this.input = new input_type()
     
     var file_str = this.input.read(query);
