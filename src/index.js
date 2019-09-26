@@ -1,5 +1,5 @@
 
-import main from './main/main_kwc';
+import main_kwc from './main/main_kwc';
 
 
 import FileReader from './main/kwic/input/fileReader';
@@ -16,4 +16,4 @@ var textinput = {
 }
 
 
-main(textinput)
+main_kwc(textinput)

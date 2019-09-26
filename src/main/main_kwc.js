@@ -6,7 +6,7 @@ import OutputInterface from './kwic/output/OutputInterface';
 import Phrase from './utils/WordsManager/DefaultLineManager';
 
 
-export default function main({
+export default function main_kwc({
       reader_type = InputInteface,
       query_main_input =  './src/main/resources/papers.txt',
       shifter_type =  ShifterInterface,
