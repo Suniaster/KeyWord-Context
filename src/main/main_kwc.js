@@ -1,19 +1,17 @@
-// Importando Input
 import InputInteface from './kwic/input/InputInteface';
+import ShifterInterface from './kwic/Shifter/ShifterInterface';
+import ArrangerInterface from './kwic/ArrangeManager/ArrangerInterface';
+import OutputInterface from './kwic/output/OutputInterface';
+
 import Phrase from './utils/WordsManager/DefaultLineManager';
 
-// Importando Shifter
-import ShifterInterface from './kwic/Shifter/ShifterInterface';
-
-// Importando Organizador
-import ArrangerInterface from './kwic/ArrangeManager/ArrangerInterface';
 
 export default function main({
       reader_type = InputInteface,
       query_main_input =  './src/main/resources/papers.txt',
       shifter_type =  ShifterInterface,
       arranger_type = ArrangerInterface,
-      output_type = console.log
+      output_type = OutputInterface
     }
   ){
   var reader = new reader_type()
@@ -49,6 +47,9 @@ export default function main({
 
   // Organizando os shifts
   todos_shifts = arranger.arrange(todos_shifts);
-  console.log(todos_shifts)
+
+  // Gerando output
+  var outputer = new output_type()
+  outputer.generateOutput(todos_shifts)
 
 }

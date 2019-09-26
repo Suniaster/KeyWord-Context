@@ -1,4 +1,4 @@
-
+import Phrase from '../../utils/WordsManager/DefaultLineManager';
 
 /**
  * Classe abstrata responsável pela criação da interface de tipos diferentes de entradas
@@ -11,11 +11,13 @@ export default class OutputInterface{
       throw new TypeError("Cannot construct InputInterface instances directly");
     }
 
-    // Requerindo a criação do método read para 
-    if(this.write === undefined){
-      throw new TypeError("Must create method read.");
-    }
-
   }
+
+  /**
+   * 
+   * @param {array} phrases_list array de frases a serem usadas 
+   * na criação do output
+   */
+  generateOutput(phrases_list){}
 }
 
