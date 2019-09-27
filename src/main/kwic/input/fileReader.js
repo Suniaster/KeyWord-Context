@@ -9,7 +9,6 @@ export default class FileReader extends InputInterface{
 
   constructor(){
     super();
-    this.default_query = './src/main/resources/papers.txt';
     this.data = '';
   }
   /**
@@ -20,7 +19,7 @@ export default class FileReader extends InputInterface{
    * @param {function(string, string)=>string} readerFunction Receives arg0: path to file and arg1: encoding and returns data from
    * the file
    */
-  read(path_to_file = this.default_query, message = '',readerFunction = fs.readFileSync){
+  read(path_to_file = undefined, message = '',readerFunction = fs.readFileSync){
     
     if(path_to_file === undefined){
       if(message.slice(-1) !== "\n"){

@@ -15,19 +15,19 @@ export default class DblpReader extends InputInterface{
   
   
   read(query = this.default_query, message = '', searcher_f= request ){
-    var url = 'https://dblp.org/search/publ/api?q='+query+'&format=json'
-    
     if(query === undefined){
-
+      query = DblpReader.getConsoleInput(message);
     }
+    
+    var url = 'https://dblp.org/search/publ/api?q='+query+'&format=json'
 
     var raw_response = searcher_f('GET', url)
     if(raw_response.statusCode != 200){
-      console.log('Problema no servidor, tentar novamente mais tarde..');
+      console.log('Problema na procura, encerrando programa');
       process.exit();
     }
 
-    var raw_data = raw_response.body.toString()
+    var raw_data = raw_response.body.toString();
 
     var data = JSON.parse(raw_data)
     /** data é um objeto nesse formato:

@@ -6,8 +6,6 @@ const fs = require('fs');
 export default class InputInterface{
   constructor(){
 
-    this.default_query;
-
     // Impedindo instaciamentos de classes desse tipo
     if(new.target === InputInterface){
       throw new TypeError("Cannot construct InputInterface instances directly");
@@ -44,7 +42,7 @@ export default class InputInterface{
    * @param {*} readerFunction 
    * @returns string contendo a conteudo que foi lido
    */
-  read(query = this.default_query, message = '', auxiliary_f = ()=>{}){}
+  read(query = undefined, message = '', auxiliary_f = ()=>{}){}
   
   /**
    * 
