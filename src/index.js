@@ -1,4 +1,4 @@
-
+import Phrase from './main/utils/WordsManager/DefaultLineManager';
 
 //Importando main
 import main_kwc from './main/main_kwc';
@@ -16,7 +16,7 @@ import ImportanceArranger from './main/kwic/ArrangeManager/ImportanceArranger';
 
 // Importando outputers
 import HtmlOutput from './main/kwic/output/HtmlOutput';
-import Phrase from './main/utils/WordsManager/DefaultLineManager';
+
 
 
 function main(){
