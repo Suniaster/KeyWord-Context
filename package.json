@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.6.0",
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "sync-request": "^6.1.0"
   }
 }

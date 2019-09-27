@@ -9,17 +9,18 @@ export default class FileReader extends InputInterface{
 
   constructor(){
     super();
+    this.default_query = './src/main/resources/papers.txt';
     this.data = '';
   }
   /**
-   * @param {string} path_to_file Parametro opcional com caminho para o arquivo a ser lido. caso não seja passado
-   * será lido do console o nome do arquivo 
+   * @param {string} path_to_file Parametro opcional com caminho para o arquivo a ser lido. caso seja passado 'undefined'
+   * será lido do console o nome do arquivo
    * @param {string} mensagem Parametro necessário caso caminho para o arquivo não seja passado. Mostra mensagem no console
    * antes de esperar por entrada
    * @param {function(string, string)=>string} readerFunction Receives arg0: path to file and arg1: encoding and returns data from
    * the file
    */
-  read(path_to_file = undefined, message = '',readerFunction = fs.readFileSync){
+  read(path_to_file = this.default_query, message = '',readerFunction = fs.readFileSync){
     
     if(path_to_file === undefined){
       if(message.slice(-1) !== "\n"){

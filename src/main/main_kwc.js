@@ -8,7 +8,7 @@ import Phrase from './utils/WordsManager/DefaultLineManager';
 
 export default function main_kwc({
       reader_type = InputInteface,
-      query_main_input =  './src/main/resources/papers.txt',
+      query =  '',
       shifter_type =  ShifterInterface,
       arranger_type = ArrangerInterface,
       output_type = OutputInterface
@@ -16,7 +16,7 @@ export default function main_kwc({
   ){
   var reader = new reader_type()
   // Lendo entrada
-  reader.read(query_main_input, 'Por favor coloque criterio de procura da entrada.');
+  reader.read(query, 'Por favor coloque criterio de procura da entrada.');
   
   // Separando strings em cada linha
   var frases = reader.processData();
