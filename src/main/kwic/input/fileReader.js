@@ -1,4 +1,4 @@
-import InputInterface from './InputInteface';
+import InputInterface from './InputInterface';
 const fs = require('fs');
 
 /**
@@ -19,7 +19,7 @@ export default class FileReader extends InputInterface{
    * @param {function(string, string)=>string} readerFunction Receives arg0: path to file and arg1: encoding and returns data from
    * the file
    */
-  read(path_to_file = undefined, message = '',readerFunction = fs.readFileSync){
+  read(path_to_file = FileReader.defaultQuery, message = '',readerFunction = fs.readFileSync){
     
     if(path_to_file === undefined){
       if(message.slice(-1) !== "\n"){
@@ -40,6 +40,10 @@ export default class FileReader extends InputInterface{
 
     this.data = r;
     return this.data;
+  }
+
+  static defaultQuery(){
+    return './src/main/resources/papers.txt';
   }
 
   /**

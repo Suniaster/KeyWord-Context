@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watchAll",
     "build": "babel src --out-dir dist",
     "build_start": "npm run build && node dist/index.js",
     "start": "node dist/index.js"
@@ -15,7 +15,9 @@
   "devDependencies": {
     "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.0"
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "jest": "^24.9.0"
   },
   "dependencies": {
     "@babel/polyfill": "^7.6.0",

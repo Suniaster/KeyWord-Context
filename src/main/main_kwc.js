@@ -1,4 +1,4 @@
-import InputInteface from './kwic/input/InputInteface';
+import InputInteface from './kwic/input/InputInterface';
 import ShifterInterface from './kwic/Shifter/ShifterInterface';
 import ArrangerInterface from './kwic/ArrangeManager/ArrangerInterface';
 import OutputInterface from './kwic/output/OutputInterface';

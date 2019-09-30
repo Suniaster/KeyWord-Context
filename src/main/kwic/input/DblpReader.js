@@ -9,12 +9,11 @@ export default class DblpReader extends InputInterface{
 
   constructor(){
     super();
-    this.default_query = 'parnas'
     this.data = '';
   }
   
   
-  read(query = this.default_query, message = '', searcher_f= request ){
+  read(query = DblpReader.defaultQuery, message = '', searcher_f= request ){
     if(query === undefined){
       query = DblpReader.getConsoleInput(message);
     }
@@ -47,6 +46,10 @@ export default class DblpReader extends InputInterface{
 
     this.data = data;
     return this.data;
+  }
+
+  static defaultQuery(){
+    return 'parnas';
   }
 
   /**

@@ -22,7 +22,9 @@ export default class InputInterface{
 
   }
 
+  static defaultQuery(){}
 
+  
   /**
    * 
    * @param {string} message mensagem escrita no console
@@ -34,6 +36,7 @@ export default class InputInterface{
 
     return resp;
   }
+
 
   /**
    * 

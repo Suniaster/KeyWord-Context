@@ -19,7 +19,7 @@ export default class StopWordsManager{
     // Separando palavras por linahs e espaços e criando uma lista com essas palavras
     file_str.split("\n").forEach(function (item, index) {
       item.split(" ").forEach(function(item_2, index){
-        words.push(item_2);
+        if(item_2 != "")words.push(item_2);
       })
     });
 
