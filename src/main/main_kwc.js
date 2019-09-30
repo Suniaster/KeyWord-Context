@@ -1,6 +1,6 @@
 import InputInteface from './kwic/input/InputInterface';
-import ShifterInterface from './kwic/Shifter/ShifterInterface';
-import ArrangerInterface from './kwic/ArrangeManager/ArrangerInterface';
+import ShifterInterface from './kwic/shifter/ShifterInterface';
+import ArrangerInterface from './kwic/arranger/ArrangerInterface';
 import OutputInterface from './kwic/output/OutputInterface';
 
 import Phrase from './utils/WordsManager/DefaultLineManager';
