@@ -9,12 +9,12 @@ async function main(){
 
   var input = await setter('input');
   var output = await setter('output');
-  var shifter = await setter("Shifter");
-  var arranger = await setter("ArrangeManager");
+  var shifter = await setter("shifter");
+  var arranger = await setter("arranger");
   var query = i.getConsoleInput("Digite query a ser procurada\n(enter para ["+input.defaultQuery()+"]) r: ");
 
   if(query == ""){
-    console.log("adwad")
+    console.log("Usando query padrão")
     query = input.defaultQuery();
   }
 

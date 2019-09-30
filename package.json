@@ -7,7 +7,8 @@
     "test": "jest --watchAll",
     "build": "babel src --out-dir dist",
     "build_start": "npm run build && node dist/index.js",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "generate_module": "scripty"
   },
   "keywords": [],
   "author": "",
@@ -17,10 +18,12 @@
     "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-react": "^7.0.0",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "scripty": "^1.9.1"
   },
   "dependencies": {
     "@babel/polyfill": "^7.6.0",
+    "colors": "^1.4.0",
     "readline-sync": "^1.4.10",
     "sync-request": "^6.1.0"
   }
