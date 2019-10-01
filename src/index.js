@@ -6,6 +6,13 @@ import main_kwc from './main/main_kwc';
 
 async function main(){
 
+  // var gerar_fonte = i.getConsoleInput("Deseja gerar codigo fonte do codigo criado? (y/n): ");
+
+  // if(gerar_fonte == "y")gerar_fonte = true;
+  // else gerar_fonte = false
+  // var name_dist = undefined;
+  // if(gerar_fonte) name_dist = i.getConsoleInput("Digite o nome do criado")
+
 
   var input = await setter('input');
   var output = await setter('output');

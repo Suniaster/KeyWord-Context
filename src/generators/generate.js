@@ -28,9 +28,7 @@ else{
   process.exit(1);
 }
 
-var text =  text_gen(module_name);
-var path = generator(module_type, module_name, text);
+var {text, test_text} = text_gen(module_name);
+generator(module_type, module_name, text, test_text);
 
-console.log("-> Generated output at: ".bold)
-console.log("-> + ".green + path.green)
 

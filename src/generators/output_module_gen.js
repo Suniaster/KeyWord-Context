@@ -25,7 +25,29 @@ export default class `+ module_name+ ` extends OutputInterface{
 
 }
   `;
-  return text;
+
+  var test_text = `
+import myModule from '../../../main/kwic/output/`+ module_name+ `';
+import Phrase from "../../../main/utils/WordsManager/DefaultLineManager";
+
+describe("Output -> `+ module_name+ `", ()=>{
+  var p1 = new Phrase("First phrase testing");
+  var p2 = new Phrase("Second phrase that we are testing");
+
+
+  test("doesn't throw error", ()=>{
+    var my_t = new myModule();
+    var a = ()=>{
+      my_t.generateOutput([p1, p2], ()=>{});
+    }
+
+    expect(a).not.toThrow();
+  })
+  // More tests here...
+  //
+})
+  `;
+  return {text, test_text};
 }
 
 

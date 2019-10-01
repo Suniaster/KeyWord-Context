@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-export default (module_, module_name, text)=>{
+export default (module_, module_name, text, test_text)=>{
 
   var inputs_path = './src/main/kwic/'+module_+'/';
 
@@ -19,6 +19,13 @@ export default (module_, module_name, text)=>{
   });
 
   var path='./src/main/kwic/'+module_+'/'+module_name+'.js';
+  var test_path = './src/test/kwic/'+module_+'/'+module_name+'.test.js';
   fs.writeFileSync(path, text);
+  fs.writeFileSync(test_path, test_text);
+
+  console.log("-> Generated files at: ".bold);
+  console.log("\t -> + ".green + path.green);
+  console.log("\t -> + ".green + test_path.green);
+
   return path;
 }
