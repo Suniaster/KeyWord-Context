@@ -11,7 +11,7 @@ export default class HtmlOutput extends OutputInterface{
     super();
   }
 
-  generateOutput(phrases_list){
+  generateOutput(phrases_list, aux_function=fs.writeFile){
     var textinic = `<!DOCTYPE html>
     <html lang="en">
     
@@ -55,7 +55,7 @@ export default class HtmlOutput extends OutputInterface{
     });
 
     var data = textinic+tablebody+textfim
-    fs.writeFile('./outputs/html/output.html', data, ()=>{});
+    aux_function('./outputs/html/output.html', data, ()=>{});
   }
 
 }

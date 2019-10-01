@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll",
-    "build": "babel src --out-dir compiled",
+    "build": "babel src --out-dir compiled --ignore src/test",
     "build_start": "npm run build && node compiled/index.js",
     "start": "node compiled/index.js",
     "generate_module": "scripty"

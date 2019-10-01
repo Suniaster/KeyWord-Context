@@ -1,4 +1,4 @@
-import KwicShifter from '../../../main/kwic/Shifter/KwicShifter';
+import KwicShifter from '../../../main/kwic/shifter/KwicShifter';
 import Phrase from '../../../main/utils/WordsManager/DefaultLineManager';
 
 describe('KwicShifter', ()=>{
