@@ -56,6 +56,7 @@ export default class HtmlOutput extends OutputInterface{
 
     var data = textinic+tablebody+textfim
     aux_function('./outputs/html/output.html', data, ()=>{});
+    console.log("Criado arquivo de saída em ./outputs/html/output.html")
   }
 
 }
